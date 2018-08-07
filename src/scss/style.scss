@@ -1,0 +1,24 @@
+// Variables
+$primary-color: hsl(345,100%,60%);
+$button-color: hsl(130,90%,60%);
+$color-font: #333;
+$font-family: Arial, Helvetica, sans-serif;
+
+$bp-s: 320px;
+$bp-m: 640px;
+$bp-l: 1024px;
+
+$max-container: 1000px;
+$gutter: 1em;
+
+$font-size: 16px;
+
+
+// Incluir componentes
+
+@import "./components/reset_basic";
+@import "./components/banner";
+@import "./components/navigation";
+@import "./components/specialization";
+@import "./components/features";
+@import "./components/projects";

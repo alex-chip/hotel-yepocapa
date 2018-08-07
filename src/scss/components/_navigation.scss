@@ -1,0 +1,115 @@
+.Menu {
+    background: $primary-color;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    padding-right: $gutter;
+    padding-left: $gutter;
+    color: #fff;
+
+    @media screen and (min-width: $bp-l) {
+        height: 60px;
+    }
+
+    &-containerLogo {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        align-content: center;
+    }
+
+    &-logo {
+        width: 40%;
+        @media screen and (min-width: $bp-l) {
+            width: 25%;
+        }
+    }
+
+    &-containerMenu {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &-nav {
+        @media screen and (max-width: $bp-l) {
+            background: $primary-color;
+            position: absolute;
+            padding-bottom: $gutter;
+            top: 40px;
+            width: 90vw;
+            transition: all .4s;
+            right: -150vw;
+            z-index: 1000;
+
+            &.is-active {
+                right: 0;
+            }
+        }
+    }
+
+    &-list {
+        line-height: 3;
+
+        @media screen and (min-width: $bp-l) {
+            display: flex;
+        }
+
+        &Item {
+            list-style: none;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            border-bottom: 1px solid rgba(255,255,255,.4);
+            transition: all .4s;
+
+            &:hover {
+                background: darken($primary-color, 15);
+            }
+
+            &:last-child {
+                border-bottom: none;
+
+            }
+
+            @media screen and (min-width: $bp-l) {
+                border-bottom: none;
+                border-left: 1px solid rgba(255,255,255,.4);
+                padding: 0 $gutter;
+
+                &:first-child {
+                    border-left: none;
+                }
+            }
+        }
+
+        &Link {
+            color: #FFF;
+            cursor: pointer;
+            display: block;
+            padding-left: $gutter;
+
+            @media screen and (min-width: $bp-l) {
+                padding-left: 0;
+            }
+        }
+    }
+
+    &-toggle {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        color: #fff;
+        align-items: center;
+        font-size: 1.3em;
+        font-weight: bold;
+        font-style: italic;
+        cursor: pointer;
+
+        @media screen and (min-width: $bp-l) {
+            display: none;
+        }
+    }
+}
+
